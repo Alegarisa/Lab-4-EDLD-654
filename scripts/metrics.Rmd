@@ -16,7 +16,9 @@ library(rio)
 
 
 ```{r}
-knn_fit_1 <- readRDS("models/knn_m1_fit.Rds") # use here
+# knn_fit_1 <- readRDS("models/knn_m1_fit.Rds") # use here
+
+knn_fit_1 <- readRDS(here::here("models", "knn-m1-basic-fit.Rds"))
 
 knn_fit_1 %>%
   collect_metrics()
