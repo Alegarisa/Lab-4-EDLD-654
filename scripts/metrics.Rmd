@@ -1,0 +1,32 @@
+---
+title: "metrics"
+author: "Alejandra Garcia Isaza"
+date: "11/10/2020"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+
+library(tidyverse)
+library(tidymodels)
+library(here)
+library(rio)
+```
+
+
+```{r}
+knn_fit_1 <- readRDS("models/knn_m1_fit.Rds") # use here
+
+knn_fit_1 %>%
+  collect_metrics()
+```
+
+```{r}
+# do tunned model metrics here
+```
+
+```{r}
+# do final metrics here
+```
+

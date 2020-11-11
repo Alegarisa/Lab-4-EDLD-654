@@ -1,0 +1,13 @@
+#!/bin/bash
+#SBATCH --partition=short
+#SBATCH --job-name=knn-m1-fit
+#SBATCH --output=knn-m1-fit.out
+#SBATCH --error=knn-m1-fit.err
+#SBATCH --time=0-01:00:00
+#SBATCH --nodes=1
+#SBATCH --ntasks-per-node=1
+#SBATCH --cpus-per-task=4
+#SBATCH --mem-per-cpu=16GB
+#SBATCH --account=edld654
+
+R CMD BATCH --no-save --no-restore knn-m1-fit-talapas.R
